@@ -4,6 +4,7 @@ import com.example.demo1.mapper.UserMapper;
 import com.example.demo1.pojo.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,8 @@ import java.util.List;
  */
 @Api(tags="用户管理")
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/user")
+@AllArgsConstructor
 public class DemoController {
     @Autowired
     private UserMapper userMapper;
